@@ -12,6 +12,7 @@ function getFetch(){
         document.querySelector('div').innerText = `Feels Like Temperature: ${data.current.feelslike}`
         document.querySelector('img').src = data.current.weather_icons
         document.querySelector('span').innerText = data.current.weather_descriptions
+        //comment
       })
       .catch(err => {
           console.log(`error ${err}`)
