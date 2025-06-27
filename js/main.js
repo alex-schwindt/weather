@@ -8,11 +8,11 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-        document.querySelector('h2').innerText = `Current Temperature: ${data.current.temperature}`
-        document.querySelector('div').innerText = `Feels Like Temperature: ${data.current.feelslike}`
+        document.querySelector('h2').innerText = `Current Temperature: ${data.current.temperature}F`
+        document.querySelector('div').innerText = `Feels Like Temperature: ${data.current.feelslike}F`
+        document.querySelector('.humidity').innerText = `Current Humidity: ${data.current.humidity}%`
         document.querySelector('img').src = data.current.weather_icons
-        document.querySelector('span').innerText = data.current.weather_descriptions
-        //comment
+        document.querySelector('.weatherDescription').innerText = data.current.weather_descriptions
       })
       .catch(err => {
           console.log(`error ${err}`)
